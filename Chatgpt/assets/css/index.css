@@ -1,0 +1,162 @@
+*{
+    margin:0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.flexCenter{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.chatgpt{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 25px;
+    margin-bottom: 60px;
+    color: #e6e2e2;
+}
+
+body{
+    color: white;
+    background: #343541;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.main-page{
+    background: #343541;
+    min-height: 100vh;
+    display: flex;
+    position: relative;
+}
+.chat-history{
+    position: fixed;
+    top:0px;
+    left: 0px;
+    width: 260px;
+    height: 100%;
+    background-color: #202123;
+    z-index: 100000;
+}
+.chat-container{
+    margin-left: 260px;
+    width:calc(100% - 260px);
+    padding-top: 50px;
+    position: absolute;
+    right: 0px;
+    height: 100%;
+    
+}
+.main-content{
+    width:60%;
+    position: relative;
+    height: 100%;
+}
+.main-page .section1{
+    flex-direction: column !important;
+}
+.bi{
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+.section1-container{
+    display: flex;
+}
+@media screen and (max-width: 700px) {
+    .section1-container {
+        display: block;
+    }
+    .chat-history {
+        display: none;
+    }
+    .chat-container {
+        margin-left: 0px;
+        width: 100%;
+    }
+}
+.column div:not(:first-child){
+    background: #3E3F4B;
+}
+
+.each-box {
+    font-size: 12px;
+    font-weight: lighter;
+    width: 250px;
+    font-weight: 100;
+    padding: 0px 5px;
+    height:60px;
+    margin: 10px 5px;
+    border-radius: 5px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.each-box h3{
+    color: #e6e2e2;
+}
+
+.section1-container :first-child .each-box:not(:first-child):hover {
+    background-color: #171719;
+    cursor: pointer;
+}
+
+
+/* we are now working on the imput field */
+.section2{
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
+    margin-left: 260px;
+    width: calc(100% - 260px);
+    background-image: linear-gradient(to top, #3E3F4B, transparent);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.section2 form{
+    width: 70%;
+}
+.from-input-field{
+    height: 50px;
+    width: 100% !important;
+    background: #3E3F4B;
+    border: none;
+    outline: none;
+    padding: 0px 15px;
+    padding-right: 40px;
+    color: #e6e2e2;
+    font-size: 15px;
+    border-radius: 10px;
+}
+
+.from-input-field::placeholder{
+    color: #bdbbbb !important;
+}
+
+.input-div{
+    position: relative;
+    
+}
+.input-div .Send-icon{
+    position: absolute;
+    right: 15px;
+    top: 16px;
+    transform: rotate(45deg);
+    cursor: pointer;
+    font-size: 16px;
+    color: #bdbbbb;
+}
+
+.below-text{
+    height: 70px;
+    font-size: 12px;
+    color: #bdbbbb;
+    text-align: center;
+}
+.section2 a {
+    color: #bdbbbb;
+}
